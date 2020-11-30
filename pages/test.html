@@ -1,45 +1,368 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html>
-<head>
-<style>
+    <head>
+        <title></title>
+    </head>
+    <body>
+      <nav class="navbar">
+        <div class="brand-title">Brand Name</div>
+        <a href="#" class="toggle-button">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      
+      
+     
+      
+      
+      
+      
+      
+      <style>
 
-.item2 { grid-area: menu; }
-.item3 { grid-area: main; }
 
-.item5 { grid-area: footer; }
-
-.grid-container {
-  display: grid;
-  grid-template-areas:
-    
-    'menu menu main main main right right'
-    'menu menu footer footer footer footer footer';
-  grid-gap: 10px;
-  background-color: #2196F3;
-  padding: 10px;
+* {
+    box-sizing: border-box;
 }
 
-.grid-container > div {
-  background-color: rgba(255, 255, 255, 0.8);
-  text-align: center;
-  padding: 20px 0;
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    display: flex;
+    position: relative;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+}
+
+.brand-title {
+    font-size: 1.5rem;
+    margin: .5rem;
+}
+
+.navbar-links {
+    height: 100%;
+}
+
+.navbar-links ul {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-links li {
+    list-style: none;
+}
+
+.navbar-links li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    padding: 1rem;
+}
+
+.navbar-links li:hover {
+    background-color: #555;
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 800px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Background Styles Only */
+
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+* {
+    font-family: Raleway;
+}
+
+html {
+    background-color: #DFDFDF;
+}
+
+.side-links {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+.side-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: white;
+  width: 180px;
+  padding: 10px 0;
+  border-radius: 10px;
+}
+
+.side-link-youtube {
+  background-color: red;
+}
+
+.side-link-twitter {
+  background-color: #1DA1F2;
+}
+
+.side-link-github {
+  background-color: #6e5494;
+}
+
+.side-link-text {
+  margin-left: 10px;
+  font-size: 18px;
+}
+
+.side-link-icon {
+  color: white;
   font-size: 30px;
 }
-</style>
+
+
+      </style>
+      
+      
+      <script>
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+
+      </script>
+      
+      
+    </body>
+</html> -->
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 <body>
+    <nav>
 
-<h1>Grid Layout</h1>
+        <div class="brand-title"><img src="/img/logo2.png" style="width: 300px;"></div>
+        <a href="#" class="toggle-button" style="margin-top: 60px;">
+          <span class="bar"></span>
+          <span class="bar"></span>
+          <span class="bar"></span>
+        </a>
+        <div class="navbar-links">
+          <ul>
+            <Li><a class="page" href="/pages/Clear bible answers.html"><button>Home</button></a></Li>
+            <Li><a href="/pages/michaels profile.html"><button>Michael's Profile</button></a></Li>
+            <Li><a href="/pages/Books.html"><button>Books</button></a></Li>
+            <Li><a href="/pages/Poetry.html"><button>Poetry</button></a></Li>
+            <Li><a href="/pages/Watch.html"><button>Watch</button></a></Li>
+            <Li><a href="/pages/listen.html"><button>Listen</button></a></Li>
+            <Li><a href="/pages/Presentations.html"><button>Presentations</button></a></Li>
+            <Li> <a href="/pages/About.html"><button>About</button></a></Li>
+          </ul>
+        </div>
 
-<p>This grid layout contains six columns and three rows:</p>
+    </nav>
 
-<div class="grid-container">
-  
-  <div class="item2">Menu</div>
-  <div class="item3">Main</div>  
-  
-  <div class="item5">Footer</div>
-</div>
+
+<style>
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: rgb(29, 29, 29);
+    justify-content: space-around;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    
+}
+
+button { 
+    padding: 55px 15px;
+    background-color: rgba(255, 255, 255, 0);
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    color: white;
+    font-size: 20px;
+    font-family: "poppins", sans-serif;
+    font-weight: 300;
+}
+
+.navbar-links button:hover {
+    background-color: rgb(0, 153, 255);
+    color: rgb(29, 29, 29);
+}
+
+.toggle-button {
+    position: absolute;
+    top: .75rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 1208px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .toggle-button {
+        display: flex;
+    }
+
+    .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar-links ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .navbar-links ul li {
+        text-align: center;
+    }
+
+    .navbar-links ul li a {
+        padding: .5rem 1rem;
+    }
+
+    .brand-title img{
+        margin-right: 90%;
+    }
+
+    .navbar-links.active {
+        display: flex;
+    }
+
+}
+
+</style>
+
+
+<script>
+
+const toggleButton = document.getElementsByClassName('toggle-button')[0]
+const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+
+toggleButton.addEventListener('click', () => {
+  navbarLinks.classList.toggle('active')
+})
+
+</script>
 
 </body>
-</html>
+</html> 
+
+
