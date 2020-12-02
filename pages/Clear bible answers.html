@@ -11,28 +11,35 @@
     <body>
 
         <div class="page-wrapper">
-        <style>
-            *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+        
 
-body{
-    background-image: url(/img/background.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
 
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    font-family: "poppins", sans-serif;
-    font-weight: 300;
-    background-color: rgb(29, 29, 29);
-}
+
+
+
+            <nav>
+                <input id="nav-toggle" type="checkbox">
+                <div class="logo"><img src="/img/logo2.png" style="width: 200px;"></div>
+                <ul class="links">
+                    <li><a href="/pages/Clear bible answers.html">Home</a></li>
+                    <li><a href="/pages/Books.html">Books</a></li>
+                    <li><a href="/pages/Poetry.html">Poetry</a></li>
+                    <li><a href="/pages/Watch.html">Watch</a></li>
+                    <li><a href="/pages/listen.html">Listen</a></li>
+                    <li><a href="/pages/Presentations.html">Presentations</a></li>
+                    <li><a href="/pages/About.html">About</a></li>
+                </ul>
+                <label for="nav-toggle" class="icon-burger">
+                    <div class="line" style="cursor: pointer;"></div>
+                    <div class="line" style="cursor: pointer;"></div>
+                    <div class="line" style="cursor: pointer;"></div>
+                </label>
+            </nav>
+            
+           
+        
+            <style>
+
 button { 
     padding: 55px 15px;
     background-color: rgba(255, 255, 255, 0);
@@ -45,103 +52,150 @@ button {
     font-weight: 300;
 }
 
-button:hover{
-    color: rgb(0, 153, 255);
-}
-
 .container button:hover {
     background-color: rgb(0, 153, 255);
     color: rgb(29, 29, 29);
 }
-
-.burger{
-    display: none;
-    cursor: pointer;
-
-}
-
-
-.burger div {
-    width: 25px;
-    height: 5px;
-    background-color: rgb(255, 255, 255);
-    margin: 3px;
-
-}
-
-@media screen and (max-width : 1280px){
-.container{
-    position: absolute;
-    right: 0px;
-    height: 92vh;
-    top: 8vh;
-    background-color: rgb (29 ,2,29);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 50%;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-
-
-
-}
-
-
-
-.container button{
-    opacity: 0;
-
-}
-
-.burger{
-    display: block;
-
-
-}
-
-
-.nav-active{
-    transform: translateX(0%);
-}
-
-@keyframes containerFade{
-    from{
-        opacity: 0;
-        transform: translateX(50px);
-
-    }
-
-    to{
-        opacity: 1;
-        transform: translateX(0px);
-
-    }
-}
-
-
-        </style>
+                body {
+            padding: 0;
+            margin: 0;
+        }
+        .container {
+            position: relative;
+            margin-top: 100px;
+        }
+        .container img {
+            display: block;
+            width: 100%;
+        }
+        nav {
+            position: fixed;
+            z-index: 10;
+            left: 0;
+            right: 0;
+            top: 0;
+            font-family: 'Montserrat', sans-serif;
+            padding: 0 5%;
+            height: 100px;
+            background-color: rgb(29, 29, 29);
+        }
+        nav .logo {
+            float: left;
+            width: 40%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            font-size: 24px;
+            color: #fff;
+        }
+        nav .links {
+            float: right;
+            padding: 0;
+            margin: 0;
+            width: 60%;
+            height: 100%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            
+        }
+        nav .links li {
+            list-style: none;
+        }
+        nav .links a {
+            display: block;
+            padding: 36px 15px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #fff;
+            text-decoration: none;
+            transition: all 0.3s ease 0s;
+        }
         
-        <nav>
-            <img class="logo" src="/img/logo2.png" style="width: 300px;" alt="Cba logo">
-            <div class="container">
-                
-                
-            <a class="page" href="/pages/Clear bible answers.html"><button>Home</button></a>
-            <a href="/pages/michaels profile.html"><button>Michael's Profile</button></a>
-            <a href="/pages/Books.html"><button>Books</button></a>
-            <a href="/pages/Poetry.html"><button>Poetry</button></a>
-            <a href="/pages/Watch.html"><button>Watch</button></a>
-            <a href="/pages/listen.html"><button>Listen</button></a>
-            <a href="/pages/Presentations.html"><button>Presentations</button></a>
-            <a href="/pages/About.html"><button>About</button></a>
-            </div>
-            <div class="burger">
-                <div class="line1"></div>
-                <div class="line2"></div>
-                <div class="line3"></div>
-            </div>
-        </nav>
+        nav .links a:hover {
+            background-color: rgb(0, 153, 255);
+            color: rgb(29, 29, 29);
+            transition: all 0.3s ease 0s;
+        }
+        #nav-toggle {
+            position: absolute;
+            top: -100px;
+        }
+        nav .icon-burger {
+            display: none;
+            position: absolute;
+            right: 5%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+        nav .icon-burger .line {
+            width: 30px;
+            height: 5px;
+            background-color: #fff;
+            margin: 5px;
+            border-radius: 3px;
+            transition: all .3s ease-in-out;
+        }
+        @media screen and (max-width: 1018px) {
+            nav .logo {
+                float: none;
+                width: auto;
+                justify-content: center;
+            }
+            nav .links {
+                float: none;
+                position: fixed;
+                z-index: 9;
+                left: 0;
+                right: 0;
+                top: 100px;
+                bottom: 100%;
+                width: auto;
+                height: auto;
+                flex-direction: column;
+                justify-content: space-evenly;
+                background-color: rgba(0,0,0,.8);
+                overflow: hidden;
+                box-sizing: border-box;
+                transition: all .5s ease-in-out;
+            }
+            nav .links a {
+                font-size: 20px;
+                padding: 15px 10000px;
+                text-align: center;
+            }
+            nav :checked ~ .links {
+                bottom: 0;
+            }
+            nav .icon-burger {
+                display: block;
+            }
+            nav :checked ~ .icon-burger .line:nth-child(1) {
+                transform: translateY(10px) rotate(225deg);
+            }
+            nav :checked ~ .icon-burger .line:nth-child(3) {
+                transform: translateY(-10px) rotate(-225deg);
+            }
+            nav :checked ~ .icon-burger .line:nth-child(2) {
+                opacity: 0;
+            }
+
+
+
+
+
+
+
+
+
+
+
+            
+            
+        }
+        
+        
+            </style>
 
         <style type="text/css">
 
@@ -201,6 +255,8 @@ button:hover{
 
 
 
+ 
+
 
 
 
@@ -214,7 +270,7 @@ button:hover{
 
 
 .top-foot {
-    height: 55vh;
+    height: 400px;
     width: 100%;
     background-color: rgb(29, 29, 29);
     display: inline-block;
@@ -765,7 +821,7 @@ text-align: center;
 <div class="msec-1">
 
 
-	<div id="slider">
+	<div id="slider" style="margin-top: 100px; margin-bottom: 0px;">
 		<figure>
 			<img src="/img/Reflections for today.png">
 			<img src="/img/Questions & answers.png">
@@ -789,7 +845,7 @@ text-align: center;
 
 
 
-<div class="m-sec-2">
+<div class="m-sec-2" style="margin-top: 0%;">
     
     <div class="grid-container">
 
