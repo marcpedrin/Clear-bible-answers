@@ -184,13 +184,26 @@ margin-left: 70px;
             <input id="nav-toggle" type="checkbox">
             <div class="logo"><img src="/img/logo2.png" style="width: 200px;"></div>
             <ul class="links">
-                <li><a href="/pages/Clear bible answers.html">Home</a></li>
-                <li><a href="/pages/Books.html">Books</a></li>
-                <li><a href="/pages/Poetry.html">Poetry</a></li>
-                <li><a href="/pages/Watch.html">Watch</a></li>
-                <li><a href="/pages/listen.html">Listen</a></li>
-                <li><a href="/pages/Presentations.html">Presentations</a></li>
-                <li><a href="/pages/About.html">About</a></li>
+                <li><a href="/pages/Clear bible answers.html" style="padding: 36px 15px;">Home</a></li>
+                
+                <li class="dude"><a href="/pages/Books.html" style="padding: 36px 15px;">Books</a></li>
+            
+                <div class="drop-down">
+                    <ul class="down">
+                        <li><a href="#" style="padding: 15px 20px;">Clarified</a></li>
+                        <li><a href="#" style="padding: 15px 20px;">Magnified</a></li>
+                        <li><a href="#" style="padding: 15px 20px;">Polygamy</a></li>
+                        <li><a href="#" style="padding: 15px 20px;">Trinity</a></li>
+                        <li><a href="#" style="padding: 15px 20px;">Lunar Sabbath</a></li>
+                        <li><a href="#" style="padding: 15px 20px; font-size: 35px;">1,44,000</a></li>
+                        
+                    </ul>
+                </div>
+                <li><a href="/pages/Poetry.html" style="padding: 36px 15px;">Poetry</a></li>
+                <li><a href="/pages/Watch.html" style="padding: 36px 15px;">Watch</a></li>
+                <li><a href="/pages/listen.html" style="padding: 36px 15px;">Listen</a></li>
+                <li><a href="/pages/Presentations.html" style="padding: 36px 15px;">Presentations</a></li>
+                <li><a href="/pages/About.html" style="padding: 6px 5px;">About</a></li>
             </ul>
             <label for="nav-toggle" class="icon-burger">
                 <div class="line"></div>
@@ -202,6 +215,28 @@ margin-left: 70px;
        
     
         <style>
+
+
+
+.drop-down {
+    display: none;
+    margin-top: 474px;
+    position: absolute;
+    margin-right: 30%;
+    background-color: rgb(29, 29, 29);
+}
+
+nav .links:hover .drop-down {
+    display: flex;
+}
+
+.dropdown .down a {
+    margin: 0;
+    
+}
+
+
+
             body {
         padding: 0;
         margin: 0;
@@ -250,7 +285,7 @@ margin-left: 70px;
     }
     nav .links a {
         display: block;
-        padding: 36px 15px;
+        
         font-size: 16px;
         font-weight: bold;
         color: #fff;
