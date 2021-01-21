@@ -8,7 +8,7 @@
         </title>
         <link rel="icon" href="/img/icon.png">
     </head>
-    <body>
+    <body style="word-spacing: 5px;">
 
         <div class="page-wrapper">
         
@@ -522,8 +522,8 @@ text-align: center;
 
 .tent h1 {
     font-size: 40px;
-    margin-bottom: 20px;
-    padding-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 3px;
     padding-left: 15px;
     font-family: 'Nerko One', cursive;
     cursor: pointer;
@@ -808,6 +808,86 @@ text-align: center;
     font-size: 55px
 }
 
+
+
+
+
+
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid rgb(0, 153, 255);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap');
@@ -847,7 +927,7 @@ text-align: center;
 
 <!--page-wrapper-->
 
-
+<div class="cursor"></div>
 <div class="msec-1">
 
 
@@ -1009,7 +1089,7 @@ Anyone who reads the Bible will have a lot of questions popping up their minds. 
 <div class="tent-2">
     
     <div class="h1">
-    <h1 style="margin-left: 25px; padding-top: 50px;">Subscribe for Daily </h1>
+    <h1 style="margin-left: 37px; padding-top: 50px;">Subscribe for our </h1>
 
 
     <h1 style="margin-left: 81px;">Devotionals!</h1>
@@ -1179,6 +1259,12 @@ Anyone who reads the Bible will have a lot of questions popping up their minds. 
             justify-content: center;
             margin-top: 25px;
         }
+
+
+
+        .cursor {
+    z-index: 999999999;
+}
     </style>
 
 
@@ -1316,12 +1402,32 @@ Anyone who reads the Bible will have a lot of questions popping up their minds. 
                 </div>
             </div>
         <div class="bottom-foot">
-            <h4>Copyright ©2006 - 2020 | All Rights Reserved | This website was Designed and Created by Marc Pedrin</h4>
+            <h4>Copyright ©2006 - 2021 | All Rights Reserved | This website was Designed and Created by Marc Pedrin</h4>
             </div>
         </div>
         </!--footer-->
     
         <script src="app.js"></script>
+
+
+        <script>
+    
+            const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+        })
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
+  </script>
+
+        
         
     </body>
 </html>

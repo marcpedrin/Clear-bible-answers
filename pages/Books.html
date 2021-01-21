@@ -531,11 +531,156 @@ justify-content: center;
     color: rgb(29, 29, 29);
 }
 
+.books-container .card-1 a img {
+    width: 200px;
+    box-shadow: 0px 0px 30px black;
+    scale: 1;
+    transition: 0.3s ease-in-out;
+}
+.grid .books-container .card-1 a img:hover {
+    scale: 8;
+    transition: 0.3s ease-in-out;
+}
 
+.grid .books-container {
+
+}
+
+.books-container .card-1 a H1 {
+
+color: black;
+font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+font-weight: 100;
+font-size: 55px;
+
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Outline&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap');
+
+.grid .books-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    align-items: center;
+    column-gap: 250px;
+    
+}
+
+
+.grid .books-container .card-1 a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 40px;
+    text-decoration: none;
+}
+
+.grid .books-container .card-1 a h1{
+    margin: 20px;
+    display: inline-block;
+    text-decoration: none;
+
+}
+
+.grid .books-container .card-1 a h1::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background: rgb(0, 153, 255);
+    transition: width .3s;
+    
+}
+
+.grid .books-container .card-1 a h1:hover::after{
+    width: 100%;
+    transition: width .3s;
+}
+
+.grid .books-container .card-1 a h1:hover {
+    color: rgb(0, 153, 255);
+    transition: .3s ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+    z-index: 99999;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid rgb(0, 153, 255);
+}
 
 </style>
 
 <!--Page-wrapper-->
+
+<div class="cursor"></div>
+
 <div class="page-wrapper" style="margin-top: 100px;">
 
     <div class="headd">
@@ -545,7 +690,7 @@ justify-content: center;
 </div>
 
 <div class="para">
-    <h3>Its crucial to have Answers in Written form!
+    <h3>It's crucial to have Answers in Written form!
         Here are some of my Books:</h3>
 
     </div>
@@ -556,7 +701,48 @@ justify-content: center;
 
     <div class="books">
 
-        
+        <div class="grid">
+        <div class="books-container">
+            <div class="card-1">
+                <a href="/pages/clarified.html">
+                <img src="/img/clairfied-book-cover.jpg" alt="">
+                <h1>Clarified</h1>
+            </a>
+            </div>
+            <div class="card-1">
+                <a href="/pages/magnified.html">
+                <img src="/img/Magnify-book-cover.jpg" alt="">
+                <h1>Magnified</h1>
+            </a>
+            </div>
+            <div class="card-1">
+                <a href="/pages/trinity.html">
+                <img src="/img/Trinity cover.jpg" alt="">
+                <h1>Trinity</h1>
+            </a>
+            </div>
+            <div class="card-1">
+                <a href="/pages/polygamy.html">
+                <img src="/img/Polygamy-book-cover.jpg" alt="">
+                <h1>Polygamy</h1>
+            </a>
+            </div>
+            <div class="card-1"  style="margin-top:60px;">
+                <a href="/pages/lunar sabbath.html">
+                <img src="/img/lunar sabbath.png" alt="">
+                <h1 style="text-align: center;">Lunar Sabbath</h1>
+            </a>
+            </div>
+            <div class="card-1">
+                <a href="/pages/144000.html">
+                <img src="/img/144,000.png" alt="">
+                <h1>144,000</h1>
+            </a>
+            </div>
+
+        </div>
+
+    </div>
 
 
     </div>
@@ -653,7 +839,7 @@ justify-content: center;
                 <ul>
 
                     
-                    <li><a href"%"><img src="/img/follow us.png" style="width: 200px; margin-top: 0; margin-left: 0;"></a></li>
+                    <li><a href"#"><img src="/img/follow us.png" style="width: 200px; margin-top: 0; margin-left: 0;"></a></li>
 
                     
                 <li><a href="https://www.youtube.com/channel/UC5SMqP_8QsmPDWhNmjgInlg?view_as=subscriber"><button><img src="/img/youtube.png" style="width: 130px;"></button></a></li>
@@ -677,11 +863,25 @@ justify-content: center;
             </div>
         </div>
     <div class="bottom-foot">
-        <h4>Copyright ©2006 - 2020 | All Rights Reserved | This website was Designed and Created by Marc Pedrin</h4>
+        <h4>Copyright ©2006 - 2021 | All Rights Reserved | This website was Designed and Created by Marc Pedrin</h4>
         </div>
     </div>
     </!--footer-->
         <script src="app.js"></script>
-        
+        <script>
+                    const cursor = document.querySelector('.cursor');
+
+document.addEventListener('mousemove', e => {
+    cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+})
+
+document.addEventListener('click', () => {
+    cursor.classList.add("expand");
+
+    setTimeout(() => {
+        cursor.classList.remove("expand");
+    }, 500)
+})
+        </script>
     </body>
 </html>

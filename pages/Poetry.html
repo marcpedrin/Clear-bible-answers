@@ -507,6 +507,77 @@ margin-left: 15px;
 
 
 
+
+
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: absolute;
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.7);
+    }
+}
+
+@keyframes cursorAnim2 {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(.4);
+    }
+}
+
+.cursor {
+    z-index: 999999999;
+}
+
+@keyframes cursorAnim3 {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(3);
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid rgb(0, 153, 255);
+}
+
+
+
+
 </style>
 
 <!--Page-wrapper-->
@@ -522,7 +593,7 @@ margin-left: 15px;
 <div class="footer">
     <div class="top-foot">
 
-
+        <div class="cursor"></div>
 
 
 
@@ -626,11 +697,30 @@ margin-left: 15px;
             </div>
         </div>
     <div class="bottom-foot">
-        <h4>Copyright ©2006 - 2020 | All Rights Reserved | This website was Designed and Created by Marc Pedrin</h4>
+        <h4>Copyright ©2006 - 2021 | All Rights Reserved | This website was Designed and Created by Marc Pedrin</h4>
         </div>
     </div>
     </!--footer-->
         <script src="app.js"></script>
+
+
+
+        <script>
+    
+            const cursor = document.querySelector('.cursor');
+
+        document.addEventListener('mousemove', e => {
+            cursor.setAttribute("style", "top: "+(e.pageY - 10)+"px; left: "+(e.pageX - 10)+"px;")
+        })
+
+        document.addEventListener('click', () => {
+            cursor.classList.add("expand");
+
+            setTimeout(() => {
+                cursor.classList.remove("expand");
+            }, 500)
+        })
+  </script>
         
     </body>
 </html>
