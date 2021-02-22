@@ -603,6 +603,10 @@ margin-left: 15px;
     }
 }
 
+button:focus{
+            outline: none;
+        }
+
 .expand {
     animation: cursorAnim3 .5s forwards;
     border: 1px solid rgb(0, 153, 255);
@@ -613,7 +617,68 @@ margin-left: 15px;
 }
 
 
+.sort {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
 
+.sort button {
+    color: white;
+    font-size: 25px;
+    background-color:rgb(29, 29, 29);
+    margin: 0;
+    padding: 5;
+    border-radius: 30px;
+    box-shadow: black 0px 0px 30px;
+    width: 30%;
+    transition: .3S ease-in-out;
+}
+
+.sort button:hover {
+    transform: scale(1.03);
+    transition: .3S ease-in-out;
+}
+
+.video-container {
+    display: flex;
+    justify-content: space-around;
+    
+
+}
+
+.video-items {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: wrap;
+    width: 90%;
+    
+
+}
+
+.video-items p {
+    font-size: 30px;
+}
+
+.video-card {
+    width: 380px;
+    background-color: rgba(255, 255, 0, 0);
+    margin-bottom: 50px;
+}
+
+.video-card iframe {
+    width: 100%;
+    box-shadow: black 0px 0px 20px;
+    
+}
+
+.video-card h4 {
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    font-family: 'poppins', sans-serif;
+    color: rgb(29, 29, 29);
+}
 
 
 </style>
@@ -630,8 +695,20 @@ margin-left: 15px;
     
     </div>
 
+    <div class="sort">
+        <button onclick="rftBtn()">Reflections for Today! </button>
+        <button onclick="qnaBtn()">Questions and Answers</button>
+        <button onclick="othersBtn()">Other Videos</button>
+    </div>
+
+    <div class="video-container">
+        <div class="video-items" id="results">
+            
+        </div>
+    </div>
+
 </div>
-</!--Page-wrapper-->
+<!-- page wrapper -->
 
 <div class="cursor"></div>
 
@@ -768,6 +845,8 @@ margin-left: 15px;
             }, 500)
         })
   </script>
+
+  <script src="/test/app.js"></script>
         
     </body>
 </html>

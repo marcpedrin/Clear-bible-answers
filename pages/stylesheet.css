@@ -11,7 +11,9 @@ body{
     background-size: cover;
 }
 
-
+button:focus{
+    outline: none;
+}
 
 nav{
     display: flex;
