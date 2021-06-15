@@ -3,6 +3,7 @@
 <head>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="stylesheet.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <title>
         Poetry-Clear Bible Answers
@@ -67,6 +68,7 @@
 
         .page-wrapper {
             min-height: 100%;
+            background-color: rgb(218, 237, 250);
         }
 
         html,
@@ -114,6 +116,7 @@
         .head img {
             margin-bottom: 15px;
             margin-left: 20px;
+            
         }
 
         .list button:hover {
@@ -445,7 +448,7 @@
             font-size: 16px;
         }
 
-        button:focus{
+        button:focus {
             outline: none;
         }
 
@@ -622,6 +625,7 @@
             80% {
                 left: -200%;
             }
+
             85% {
                 left: -300%;
             }
@@ -669,7 +673,7 @@
 
 
 
-        .card a {
+        /* .card a {
 
             margin-top: 40px;
             margin-left: 40px;
@@ -705,12 +709,16 @@
         .card a h1:hover {
             color: rgb(0, 153, 255);
             transition: .3s ease-in-out;
-        }
+        } */
 
         .card {
             display: flex;
             flex-direction: column;
             justify-content: start;
+        }
+
+        .card a {
+            text-decoration: none;
         }
 
         .card p {
@@ -735,27 +743,291 @@
         .body .initial {
             padding-left: 19.2vw;
         }
+
+        .containerX {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-flow: wrap;
+        }
+
+        .card {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            
+        }
+
+        .pic-left {
+            display: flex;
+            justify-content: center;
+            width: 80%;
+            margin-bottom: 50px;
+
+        }
+
+        .pic-left .hi{
+            width: 350px;
+            height: 280px;
+            box-shadow: 0px 0px 20px black;
+        }
+        
+        .content {
+            margin: 20px;
+            background: aliceblue;
+            height: 240px;
+            margin-left: 10px;
+        }
+
+        h1{
+            color: rgb(51, 51, 51);
+            font-family: "poppins", sans-serif;
+            font-size: 40;
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        .line {
+            width: 500px;
+            height: 3px;
+            background: rgb(51, 51, 51);
+            margin-left: 20px;
+        }
+
+        .content p {
+            font-size: 18px;
+            width: 90% ;
+            margin-left: 20px;
+            margin-top: 10px;
+        }
+
+        .content-2 {
+            background: rgb(158, 216, 255);
+        }
+
+        .poet{
+            width: 365px;
+            height: 60px;
+            background-color: rgb(29, 29, 29);
+            margin-top: px;
+        }
+
+        .poet h1 {
+            margin-top: -5px;
+            color: rgb(255, 87, 87);
+            animation: const 5s infinite;
+            position: absolute;
+
+        }
+
+        .wht {
+            font-family: cursive;
+            color: white;
+            font-size: 45px;
+        }
+
+        .border {
+            width: 373px;
+            height: 66px;
+            background-color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            animation: fade 5s infinite;
+            margin-left: 38%;
+            margin-top: -15%;
+            margin-bottom: 13%;
+
+        }
+
+        .border:hover {
+            animation: stop 5s infinite;
+            opacity: 100%;
+            transition: .5s ease-in-out;
+            transform: scale(1.05);
+
+        }
+
+        .der {
+            text-decoration: none;
+            margin-top: 0;
+        }
+
+        @keyframes fade {
+            0%{
+                opacity: 0%;
+            }
+
+            50%{
+                opacity: 100%;
+            }
+            100%{
+                opacity: 0%;
+            }
+        }
+
+        @keyframes stop {
+            0%{
+                opacity: 100%;
+            }
+
+            50%{
+                opacity: 100%;
+            }
+            100%{
+                opacity: 100%;
+            }
+        } 
+
+        @keyframes const {
+            0%{
+                opacity: 100%;
+            }
+
+            50%{
+                opacity: 100%;
+            }
+            100%{
+                opacity: 100%;
+            }
+        } 
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        #bar {
+            width: 100px;
+            height: 50px;
+            background-color: rgba(255, 255, 255, 0);
+            position: absolute;
+            margin-top: -130px;
+        }
+
+
+        .beegees .po{
+            color: rgba(29, 29, 29, 0.096);
+            position: absolute;
+            margin-top: 900px;
+            font-size: 250px;
+            z-index: 2;
+            animation: poetry 60s infinite;
+
+        }
+
+        .beegees .hym{
+            color: rgba(29, 29, 29, 0.096);
+            position: absolute;
+            margin-top: 1900px;
+            font-size: 250px;
+            z-index: 2;
+            animation: hm 60s infinite;
+
+        }
+
+        .card{
+            z-index: 8;
+        }
+
+        @keyframes poetry {
+            0% {
+                opacity: 0%;
+            }
+            8%{
+                opacity: 100%;
+                margin-top: 900px;
+            }
+
+            100%{
+                margin-top: 700px;
+                opacity: 0%;
+            }
+        }
+
+        @keyframes hm {
+            0% {
+                opacity: 0%;
+                margin-left: 500px;
+            }
+            8%{
+                opacity: 100%;
+                margin-top: 1900px;
+                margin-left: 500px;
+            }
+
+            100%{
+                margin-top: 1600px;
+                opacity: 0%;
+                margin-left: 500px;
+            }
+        }
+
+        .content h1:hover{
+            color: rgb(0, 153, 255);
+            transition: .3s ease-in-out;
+        }
+
+        .content h1 {
+            transition: .3s ease-in-out;
+        }
+
+        .page-wrapper{
+            width: 100%;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+
+
+
+
+
+
+
+
+
+        
     </style>
 
 
 
     <!--Page-wrapper-->
+
+    <div class="beegees">
+        <h1 class="po">Poetry!</h1>
+        <h1 class="hym">Hymns!</h1>
+    </div>
+
+
     <div class="page-wrapper">
 
 
-        <div class="m-sec-1">
-            <div id="slider" style="margin-top: 100px; margin-bottom: 0px;">
+        <div class="m-sec-1" style="z-index: 5;">
+            <div id="slider" style="margin-top: 100px; margin-bottom: 0px; z-index: 5;">
                 <figure>
-                    <img src="/img/poetry-3.webp">
-                    <img src="/img/poetry 2.webp">
-                    <img src="/img/poetry 1.webp">
-                    <img src="/img/poetry-3.webp">
+                    <img src="/img/Sweetest Of Names  copy .png" style="margin-top: -110px;">
+                    <img src="/img/Sacred Instructios Neglected  copy.png" style="margin-top: -110px;">
+                    <img src="/img/Great Original Designer  copy.png" style="margin-top: -110px;">
+                    <img src="/img/Sweetest Of Names  copy .png" style="margin-top: -110px;">
 
                 </figure>
             </div>
+<a class="der" href="#bar">
+            <div class="border">
+                <div class="poet">
+                <h1>Michael's <span class="wht">Poetry</span></h1>
+            </div>
+
+        </a>
+        
+        </div>
+        
         </div>
 
-        <div class="header">
+        <!-- <div class="header">
 
             <div class="d-line" style="margin-top: 2vh;margin-Bottom: 2vh;"></div>
 
@@ -838,116 +1110,168 @@
         </div>
 
 
-    </div>
-    </!--Page-wrapper-->
+    </div> -->
+<div id="bar"></div>
+    
+    <section id="two">
 
-
-
-
-    <!--footer-->
-
-
-    <div class="footer">
-        <div class="top-foot">
-
-            <div class="cursor"></div>
-
-
-
-
-
-
-            <div class="footer-section 1">
-
-                <a class="logo">
-                    <img src="/img/CBA.png">
-                </a>
-
-
-                <p style="color: white; padding-left: 40px; padding-top: 35px; letter-spacing: 3px; line-height: 30px;">
-
-
-
-                    This site is basically about answering important, interesting, and tough Bible questions. We believe
-                    God has led you here.
-                </p>
-
-
-                <div class="explore">
-
-                    <a href="About.html"><button>Explore +</button></a>
-
+        <div class="containerX" id="containerX">
+            <div class="card" data-aos="fade-left">
+                <div class="pic-left">
+                    <img src="/img/Law thumb.png" class="hi" alt="">
+                    <div class="content">
+                        <a href="/pages/Acronyms.html"><h1>
+                            Acronyms!
+                        </h1>
+                    </a>
+                        <div class="line"></div>
+                        <p>Acronym/Initialization is basically giving meaning to a given word using 
+                            all the letters of the
+                            word itself in a flowing sentence. An example of it is in the picture where the word GOD is
+                            initialized as--Great Original Designer. There are many such words Initialized, and
+                            regularly
+                            new ones will be added. So keep checking.</p>
+                    </div>
                 </div>
 
+
+                <div class="card" data-aos="fade-right">
+                    <div class="pic-left">
+                        
+                        <div class="content content-2" >
+
+                            <a href="/pages/Maxims.html">
+                            <h1>
+                                Maxims!
+                            </h1>
+
+                        </a>
+                            <div class="line"></div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed temporibus, asperiores tenetur
+                                mollitia impedit cupiditate ex laboriosam harum a, neque in enim optio corrupti assumenda,
+                                tempora beatae consequatur soluta facere eligendi dolorum incidunt! In sint doloremque,
+                                ullam maxime voluptas quam.</p>
+                        </div>
+
+                        <img src="/img/maxims thumb.png" class="hi" alt="">
+                    </div>
             </div>
 
 
 
 
+            <div class="card" data-aos="fade-left">
+                <div class="pic-left">
+                    <img src="/img/Hymns thumb.png" class="hi" alt="">
+                    <div class="content">
+                        <a href="">
+                        <h1>
+                            Hymns!
+                        </h1>
 
-
-
-            <div class="footer-section 2">
-
-                <div class="head">
-                    <img src="/img/top sites.png">
+                    </a>
+                        <div class="line"></div>
+                        <p>Acronym/Initialization is basically giving meaning to a given word using 
+                            all the letters of the
+                            word itself in a flowing sentence. An example of it is in the picture where the word GOD is
+                            initialized as--Great Original Designer. There are many such words Initialized, and
+                            regularly
+                            new ones will be added. So keep checking.</p>
+                    </div>
                 </div>
 
-                <ul class="list">
 
 
 
-                    <li><a href="https://www.amazingfacts.org/"><button>| Amazing Facts</button></a></li>
+                <div class="card" data-aos="fade-right">
+                    <div class="pic-left">
+                        
+                        <div class="content content-2" >
+                            <a href="">
+                            <h1>
+                                Acrostic Poems!
+                            </h1>
+                        </a>
+                            <div class="line"></div>
+                            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed temporibus, asperiores tenetur
+                                mollitia impedit cupiditate ex laboriosam harum a, neque in enim optio corrupti assumenda,
+                                tempora beatae consequatur soluta facere eligendi dolorum incidunt! In sint doloremque,
+                                ullam maxime voluptas quam.</p>
+                        </div>
 
-                    <li><a href="https://www.itiswritten.com/"><button>| It is Written</button></a></li>
-
-                    <li><a href="https://www.voiceofprophecy.com/"><button>| Voice of Prophecy</button></a></li>
-
-                    <li><a href="https://3abn.org/"><button>| 3 Angels Broadcasting Network</button></a></li>
-
-                    <li><a href="https://thefinalherald.com/"><button>| The Final Herald</button></a></li>
-
-                    <li><a href="https://xulonzoe.org/"><button>| Xulon Zoe</button></a></li>
-
-                </ul>
-
+                        <img src="/img/Acronyms.png" class="hi" alt="">
+                    </div>
             </div>
 
 
 
 
+            <div class="card" data-aos="fade-left">
+                <div class="pic-left">
+                    <img src="/img/Topical Poems.png" class="hi" alt="">
+                    <div class="content">
+                        <a href="">
+                        <h1>
+                            Topical Poems!
+                        </h1>
+
+                    </a>
+                        <div class="line"></div>
+                        <p>Acronym/Initialization is basically giving meaning to a given word using 
+                            all the letters of the
+                            word itself in a flowing sentence. An example of it is in the picture where the word GOD is
+                            initialized as--Great Original Designer. There are many such words Initialized, and
+                            regularly
+                            new ones will be added. So keep checking.</p>
+                    </div>
+                </div>
+        </div>
+
+    </section>
+
+
+        </!--Page-wrapper-->
 
 
 
-            <div class="footer-section 3">
+
+        <!--footer-->
+
+
+        <div class="footer">
+            <div class="top-foot">
+
+                <div class="cursor"></div>
 
 
 
-                <div class="social-media">
-                    <div class="follow">
 
+
+
+                <div class="footer-section 1">
+
+                    <a class="logo">
+                        <img src="/img/CBA.png">
+                    </a>
+
+
+                    <p
+                        style="color: white; padding-left: 40px; padding-top: 35px; letter-spacing: 3px; line-height: 30px; font-size: 15px;">
+
+
+
+                        This site is basically about answering important, interesting, and tough Bible questions. We
+                        believe
+                        God has led you here.
+                    </p>
+
+
+                    <div class="explore">
+
+                        <a href="About.html"><button>Explore +</button></a>
 
                     </div>
-                    <ul>
 
-
-                        <li><a href"%"><img src="/img/follow us.png"
-                                    style="width: 200px; margin-top: 0; margin-left: 0;"></a></li>
-
-
-                        <li><a href="https://www.youtube.com/channel/UC5SMqP_8QsmPDWhNmjgInlg?view_as=subscriber"><button><img
-                                        src="/img/youtube.png" style="width: 130px;"></button></a></li>
-
-                        <li><a href="https://www.facebook.com/Clear.Bible.Answers/"><button><img src="/img/facebook.png"
-                                        style="width:150px;"></button></a></li>
-
-                        <li><a href="/img/email.png"><button><img src="/img/email copy 2.png"
-                                        style="width:110px;"></button></a></li>
-
-                        <li><a href="/img/whatsaap.png"><button><img src="/img/whats.png"
-                                        style="width: 130px;"></button></a></li>
-
-                    </ul>
                 </div>
 
 
@@ -956,34 +1280,112 @@
 
 
 
+                <div class="footer-section 2">
 
+                    <div class="head">
+                        <img src="/img/top sites.png">
+                    </div>
+
+                    <ul class="list">
+
+
+
+                        <li><a href="https://www.amazingfacts.org/"><button>| Amazing Facts</button></a></li>
+
+                        <li><a href="https://www.itiswritten.com/"><button>| It is Written</button></a></li>
+
+                        <li><a href="https://www.voiceofprophecy.com/"><button>| Voice of Prophecy</button></a></li>
+
+                        <li><a href="https://3abn.org/"><button>| 3 Angels Broadcasting Network</button></a></li>
+
+                        <li><a href="https://thefinalherald.com/"><button>| The Final Herald</button></a></li>
+
+                        <li><a href="https://xulonzoe.org/"><button>| Xulon Zoe</button></a></li>
+
+                    </ul>
+
+                </div>
+
+
+
+
+
+
+
+                <div class="footer-section 3">
+
+
+
+                    <div class="social-media">
+                        <div class="follow">
+
+
+                        </div>
+                        <ul>
+
+
+                            <li><a href"%"><img src="/img/follow us.png"
+                                        style="width: 200px; margin-top: 0; margin-left: 0;"></a></li>
+
+
+                            <li><a href="https://www.youtube.com/channel/UC5SMqP_8QsmPDWhNmjgInlg?view_as=subscriber"><button><img
+                                            src="/img/youtube.png" style="width: 130px;"></button></a></li>
+
+                            <li><a href="https://www.facebook.com/Clear.Bible.Answers/"><button><img
+                                            src="/img/facebook.png" style="width:150px;"></button></a></li>
+
+                            <li><a href="/img/email.png"><button><img src="/img/email copy 2.png"
+                                            style="width:110px;"></button></a></li>
+
+                            <li><a href="/img/whatsaap.png"><button><img src="/img/whats.png"
+                                            style="width: 130px;"></button></a></li>
+
+                        </ul>
+                    </div>
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <div class="bottom-foot">
+                <h4>Copyright ©2006 - 2021 | All Rights Reserved | This website was Designed and Created by Marc Pedrin
+                </h4>
             </div>
         </div>
-        <div class="bottom-foot">
-            <h4>Copyright ©2006 - 2021 | All Rights Reserved | This website was Designed and Created by Marc Pedrin</h4>
-        </div>
-    </div>
-    </!--footer-->
-    <script src="app.js"></script>
+        </!--footer-->
+        <script src="app.js"></script>
 
 
 
-    <script>
+        <script>
 
-        const cursor = document.querySelector('.cursor');
+            const cursor = document.querySelector('.cursor');
 
-        document.addEventListener('mousemove', e => {
-            cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
-        })
+            document.addEventListener('mousemove', e => {
+                cursor.setAttribute("style", "top: " + (e.pageY - 10) + "px; left: " + (e.pageX - 10) + "px;")
+            })
 
-        document.addEventListener('click', () => {
-            cursor.classList.add("expand");
+            document.addEventListener('click', () => {
+                cursor.classList.add("expand");
 
-            setTimeout(() => {
-                cursor.classList.remove("expand");
-            }, 500)
-        })
-    </script>
+                setTimeout(() => {
+                    cursor.classList.remove("expand");
+                }, 500)
+            })
+        </script>
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+  AOS.init({
+      offset: 120,
+      duration: 800
+  });
+</script>
 
 </body>
 

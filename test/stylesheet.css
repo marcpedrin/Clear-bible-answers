@@ -1,0 +1,84 @@
+/* general
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.button button {
+  background-color: rgba(240, 248, 255, 0);
+  border: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 50px;
+  word-spacing: 10px;
+  margin-top: 25.3%;
+  margin-left: 43%;
+
+}
+
+.lines .line {
+  width: 500px;
+  height: 3px;
+  background-color: black
+}
+
+.lines .e1 {
+  margin-top: 360px;
+  margin-left: 600px;
+  position: absolute;
+  width: 305px;
+}
+
+.lines .e2 {
+  margin-top: 435px;
+  margin-left: 600px;
+  position: absolute;
+  width: 305px;
+}
+
+/* .lines .e3 {
+  margin-top: 360px;
+  margin-left: 600px;
+  position: absolute;
+  width: 3px;
+  height: 75px;
+}
+
+.lines .e4 {
+  margin-top: 360px;
+  margin-left: 905px;
+  position: absolute;
+  width: 3px;
+  height: 78px;
+} 
+
+
+
+.lines .e3 {
+  margin-top: 360px;
+  margin-left: 600px;
+  position: absolute;
+  width: 3px;
+  height: 0px;
+}
+
+.lines .e4 {
+  margin-top: 360px;
+  margin-left: 905px;
+  position: absolute;
+  width: 3px;
+  height: 0px;
+}
+
+.button button:hover line. .e3, .e4 {
+
+  margin-top: 360px;
+  margin-left: 600px;
+  position: absolute;
+  width: 3px;
+  height: 75px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap'); */
+
